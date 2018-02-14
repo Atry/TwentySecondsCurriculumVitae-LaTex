@@ -20,146 +20,125 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
-\usepackage[utf8]{inputenc}
+
+
+\usepackage{CJKutf8}
+\usepackage[utf8]{inputenc} % optional
+
+\usepackage{listings}
+\lstset{
+  language=Scala,
+  basicstyle=\ttfamily,
+  breaklines=true,
+  columns=fixed,
+  basewidth=0.5em,
+  captionpos=b,
+  tabsize=2,
+  frame=top,frame=bottom,
+}
+
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
-\profilepic{alice.jpeg} % Profile picture
+\profilepic{575x575.png} % Profile picture
 
-\cvname{Yang Bo} % Your name
-\cvjobtitle{Developer} % Job title/career
+\cvname{杨博 (Yang Bo)} % Your name
+\cvjobtitle{Lead Consultant} % Job title/career
 
 \cvdate{22 February 1986} % Date of birth
-\cvaddress{United Kingdom} % Short address/location, use \newline if more than 1 line is required
-\cvnumberphone{+39 0325658974} % Phone number
-\cvsite{http://en.wikipedia.org} % Personal website
-\cvmail{alice@wonderland.com} % Email address
+\cvaddress{} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+86 18126548504} % Phone number
+\cvsite{http://hen.la} % Personal website
+\cvmail{pop.atry@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
-
 \begin{document}
+\begin{CJK}{UTF8}{gbsn}
 
 %----------------------------------------------------------------------------------------
 %	 ABOUT ME
 %----------------------------------------------------------------------------------------
 
-\aboutme{Alice is a sensible prepubescent girl from a wealthy English family who finds herself in a strange world ruled by imagination and fantasy. Alice feels comfortable with her identity and has a strong sense that her environment is comprised of clear, logical, and consistent rules and features. Alice's familiarity with the world has led one critic to describe her as a "disembodied intellect". Alice displays great curiosity and attempts to fit her diverse experiences into a clear understanding of the world.} % To have no About Me section, just remove all the text and leave \aboutme{}
+\aboutme{Yang Bo is a technical lead who designed and implemented many commercial and open-source products in
+various domains, including mobile and web development, online game and machine learning. He now focuses on applying
+meta-programming and functional programming paradigms to distributed machine learning system.} % To have no About Me section, just remove all the text and leave \aboutme{}
 
 %----------------------------------------------------------------------------------------
 %	 SKILLS
 %----------------------------------------------------------------------------------------
 
 % Skill bar section, each skill must have a value between 0 an 6 (float)
-\skills{{pursuer of rabbits/5.8},{good manners/4},{outgoing/4.3},{polite/4},{Java/0.01}}
+\skills{{Project Management/4},{Software Design/5.8},{Machine Learning/3},{Scala/5.5}}
 
 %------------------------------------------------
 
 % Skill text section, each skill must have a value between 0 an 6
-\skillstext{{lovely/4},{narcissistic/3}}
+\skillstext{{Scala.js/5.5},{Haxe/5.5},{Agile Practices/5},{OpenCL/5},{C++/4},{Java/4},{JavaScript/4},{DevOps/4},{Play Framework/3},{ActionScript/4},{Testing/3},{C/3},{Spark/3},{Akka/3}}
 
 %----------------------------------------------------------------------------------------
 
 \makeprofile % Print the sidebar
 
-%----------------------------------------------------------------------------------------
-%	 INTERESTS
-%----------------------------------------------------------------------------------------
 
-\section{Interests}
 
-The heroine and the dreamer of Wonderland; Alice is the principal character.
 
-%----------------------------------------------------------------------------------------
-%	 EDUCATION
-%----------------------------------------------------------------------------------------
 
-\section{Education}
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{since 1865}{Ph.D. {\normalfont candidate in Computer Science}}{Wonderland}{\emph{A Quantified Theory of Social Cohesion.}}
-	\twentyitem{1863-1865}{M.Sc. magna cum laude}{Wonderland}{Majoring in Computer Science}
-	\twentyitem{1861-1863}{B.Sc. magna cum laude}{Wonderland}{Majoring in Computer Science}
-	\twentyitem{1856-1861}{High school}{Wonderland}{Specializing in mathematics and physics.}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\section{Open-source projects}
 
 \begin{twenty}
-\twentyitem{1234}{lalal}{lalala}{lalalalalalla}
+	\twentyitem{2016-present}{\href{http://deeplearning.thoughtworks.school/}{DeepLearning.scala}}{Scala}{is a simple library for creating complex neural networks.}
+	\twentyitem{2015-present}{\href{https://github.com/ThoughtWorksInc/Binding.scala}{Binding.scala}}{Scala}{is a popular Reactive Web Framework written in Scala.js.}
+	\twentyitem{2015-present}{\href{https://github.com/ThoughtWorksInc/Each}{ThoughtWorks Each}}{Scala}{provides the \lstinline{each} notation for creating monadic expressions in Scala.}
+	\twentyitem{2015-2016}{\href{https://thoughtworksinc.github.io/microbuilder/1-overview.html}{Microbuilder}}{Haxe / Scala / Java / JavaScript}{is a toolkit that helps you build system across micro-services implemented in various languages communicating via RESTful JSON API.}
+	\twentyitem{2014}{\href{https://github.com/qifun/stateless-future}{Stateless Future}}{Scala}{is a set of Domain-specific language for asynchronous programming, in the pure functional flavor.}
+	\twentyitem{2012-present}{\href{https://github.com/Atry/haxe-continuation}{haxe-continuation}}{Haxe}{provides \lstinline{async}/\lstinline{await} syntax for Haxe.}
+	\twentyitem{2010-present}{\href{https://github.com/Atry/protoc-gen-as3/}{protoc-gen-as3}}{ActionScript3}{is a Protocol Buffers plugin for ActionScript 3.}
 \end{twenty}
-
-%----------------------------------------------------------------------------------------
-%	 PUBLICATIONS
-%----------------------------------------------------------------------------------------
 
 \section{Publications}
 
 \begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
-	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
-	\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
-	\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
-	\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
-	%\twentyitemshort{<dates>}{<title/description>}
+	\twentyitemshort{2017}{\href{http://deeplearning.thoughtworks.school/assets/paper.pdf}{DeepLearning.scala 2.0: Statically Typed Neural Networks}}
+	\twentyitemshort{2017}{\href{http://www.infoq.com/articles/more-than-react-part-i}{More than React}}
+	\twentyitemshort{2009}{\href{https://books.google.com/books/about/Flex_3\%E6\%9D\%83\%E5\%A8\%81\%E6\%8C\%87\%E5\%8D\%97.html?id=dNUsQwAACAAJ}{Adobe Flex 3: Training from the Source} (translator)}
 \end{twentyshort}
 
-%----------------------------------------------------------------------------------------
-%	 AWARDS
-%----------------------------------------------------------------------------------------
+\section{Talks}
 
-\section{Awards}
+\begin{twenty}
+	\twentyitem{2017}{\href{http://bdtc2017.bigdataforum.org.cn/m/zone/bdtc2017/guest_detail?mid=1547&id=5932}{Deeplearning.Scala——开源深度学习框架思考与实践}}{DBTC}{}
+	\twentyitem{2017}{\href{https://thestrangeloop.com/2017/monadic-deep-learning.html}{Monadic Deep Learning}}{Strange Loop}{}
+	\twentyitem{2017}{\href{http://myslide.cn/slides/6644}{神经网络与函数式编程}}{ArchData Summit · Beijing}{}
+	\twentyitem{2016}{\href{http://www.infoq.com/cn/presentations/more-than-async}{More than Async}}{QCon · Beijing}{}
+	\twentyitem{2015}{\href{http://www.ecug.org/2015:home}{Specific-domain extension in an universal language}}{ECUG Con}{}
+\end{twenty}
 
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1987}{All-Time Best Fantasy Novel.}
-	\twentyitemshort{1998}{All-Time Best Fantasy Novel before 1990.}
-	%\twentyitemshort{<dates>}{<title/description>}
-\end{twentyshort}
-
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
 
 \section{Experience}
 
 \begin{twenty} % Environment for a list with descriptions
-	\twentyitem{1900}{Alice in Wonderland-The Circra (1900's) Silent Film.}{Film}{The first Alice on film was over a hundred years ago.}
-	\twentyitem{1933}{Alice in Wonderland 1933 version.}{Film}{This film stars Ethel griffies and Charlotte Henry. It was a box office flop when it was released.}
-	\twentyitem{1951}{Disney Film.}{Film}{Walt Disney brings Lewis Carroll's fantasy story to life in this well done animated classic. Even though many elements from the book were dropped, such as the duchess with the baby pig and mock turtle, this version is without a doubt the most famous Alice adaption made.}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+	\twentyitem{2015-present}{Thoughtworks Inc}{Lead Consultant}{
+		I maintained some open-source projects sponsored by ThoughtWorks.
+		I also provided consulting and delivery service for various clients in different domains including mobile, web and big data.
+	}
+	\twentyitem{2014}{Shenzhen QiFun Network Corp., LTD}{Chief Programmer}{I led the Q-Force Team in developing game engine along with its related tools, and two mobile games.}
+	\twentyitem{2011-2013}{Shenzhen Putaoteng Network Technology
+	Co., Ltd.}{Co-founder}{I led the start-up team in developing a 3D side-scrolling game engine VinyHome and a social game 男搭女配.}
+	\twentyitem{2008-2011}{NetEase, Inc.}{Chief Programmer}{I participated in various product teams as a developer or the technical lead, including 战国风云 (web game), 卡牌对决 (web game), Deepcold (3D game engine).}
+	\twentyitem{2007}{Beijing HiPiHi Information Technology
+	Corp.,Ltd}{Software Engineer}{I developed variant components of both client-side and server-side for a 3D virtual world, HiPiHi World.}
+	\twentyitem{2006-2007}{Beijing AutoNavi Software Co., Ltd.}{Software Engineer}{As a developer, I developed some components for a 3D navigation software.}
+	
 \end{twenty}
 
-%----------------------------------------------------------------------------------------
-%	 OTHER INFORMATION
-%----------------------------------------------------------------------------------------
+\section{Education}
 
-\section{Other information}
+\begin{twenty}
+	\twentyitem{2002-2006}{Southwest University of Political Science and Law}{Bachelor Of Lows}{}
+\end{twenty}
 
-\subsection{Review}
-
-Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
-
-%----------------------------------------------------------------------------------------
-%	 SECOND PAGE EXAMPLE
-%----------------------------------------------------------------------------------------
-
-%\newpage % Start a new page
-
-%\makeprofile % Print the sidebar
-
-%\section{Other information}
-
-%\subsection{Review}
-
-%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
-
-%\section{Other information}
-
-%\subsection{Review}
-
-%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
-
-%----------------------------------------------------------------------------------------
-
+\end{CJK}
 \end{document} 

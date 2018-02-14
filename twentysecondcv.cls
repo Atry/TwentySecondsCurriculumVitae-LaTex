@@ -96,9 +96,7 @@
 \newcommand\skillstext[1]{ 
 	\renewcommand{\skillstext}{
 		\begin{flushleft}
-			\foreach [count=\i] \x/\y in {#1}{ 
-				\x$ \star $\y
-			}
+			\foreach [count=\i] \x/\y in {#1}{\mbox{\x\hspace{0.4em}$\star$\y}\hspace{1em}}
 		\end{flushleft}
 	}
 }
@@ -142,7 +140,7 @@
 			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
 			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \cvsite\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\cvsite}{\cvsite}\\}
 			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
 		\end{tabular}
 
@@ -230,8 +228,8 @@
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#2}%
 		\hfill%
-		{\footnotesize#3}\\%
-		#4\vspace{\parsep}%
+		{\footnotesize#3}%
+		\ifthenelse{\equal{#4}{}}{}{\\#4\vspace{\parsep}}%
 	}\\
 }
 

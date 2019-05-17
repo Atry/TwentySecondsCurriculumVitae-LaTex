@@ -18,6 +18,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{fontawesome}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -69,6 +70,10 @@
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
+\newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
+\newcommand{\cvreddit}[1]{\renewcommand{\cvreddit}{#1}}
+\newcommand{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -137,11 +142,15 @@
 
 		\renewcommand{\arraystretch}{1.6}
 		\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\large\icon{\faPhone}} & \cvdate\\}
 			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\cvsite}{\cvsite}\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large\icon{\faHome}} & \href{\cvsite}{\cvsite}\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{\faEnvelope}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvtwitter}{}}{}{\textsc{\large\icon{\faTwitter}} & \href{https://twitter.com/\cvtwitter}{\cvtwitter}\\}
+			\ifthenelse{\equal{\cvreddit}{}}{}{\textsc{\large\icon{\faRedditAlien}} & \href{https://reddit.com/u/\cvreddit}{\cvreddit}\\}
+			\ifthenelse{\equal{\cvstackoverflow}{}}{}{\textsc{\large\icon{\faStackOverflow}} & \href{https://stackoverflow.com/users/\cvstackoverflow}{\cvstackoverflow}\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\large\icon{\faGithubAlt}} & \href{https://github.com/\cvgithub}{\cvgithub}\\}
 		\end{tabular}
 
 		%------------------------------------------------

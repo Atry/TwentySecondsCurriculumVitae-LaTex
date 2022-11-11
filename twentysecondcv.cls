@@ -238,7 +238,7 @@
 		\textbf{#2}%
 		\hfill%
 		{\footnotesize#3}%
-		\ifthenelse{\equal{#4}{}}{}{\\#4\vspace{\parsep}}%
+		\ifthenelse{\equal{#4}{}}{}{\footnotesize\\#4\vspace{\parsep}}%
 	}\\
 }
 

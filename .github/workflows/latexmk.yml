@@ -6,12 +6,6 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - uses: reitermarkus/latexmk@main
 
-      - name: Generate PDF document
-        uses: hspaans/latexmk-action@v1
-        with:
-          format: pdf
-          filename: ''
-  

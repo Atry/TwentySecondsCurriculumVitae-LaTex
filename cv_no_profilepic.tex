@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+
+\usepackage{CJKutf8}
+\usepackage[utf8]{inputenc} % optional
+
+\usepackage{listings}
+\lstset{
+  language=Scala,
+  basicstyle=\ttfamily,
+  breaklines=true,
+  columns=fixed,
+  basewidth=0.5em,
+  captionpos=b,
+  tabsize=2,
+  frame=top,frame=bottom,
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{} % Profile picture
+
+\cvname{Yang, Bo} % Your name
+\cvjobtitle{Developer} % Job title/career
+
+\cvdate{} % Date of birth
+% \cvdate{22 February 1986} % Date of birth
+\cvaddress{} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+1-415-420-9693} % Phone number
+\cvsite{https://yang-bo.com} % Personal website
+\cvmail{pop.atry@gmail.com} % Email address
+\cvtwitter{pop\_atry} % Twitter
+\cvreddit{yang\_bo} % Twitter
+\cvstackoverflow{955091}
+\cvgithub{Atry}
+%----------------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+\input{profile}
+\input{sections}
+
+\end{CJK}
+\end{document} 

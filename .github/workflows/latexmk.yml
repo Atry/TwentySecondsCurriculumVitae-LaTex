@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: reitermarkus/latexmk@main
-
+      - uses: dante-ev/latex-action@latest
+        with:
+          root_file: cv.tex
+      - uses: dante-ev/latex-action@latest
+        with:
+          root_file: cv_no_profilepic.tex

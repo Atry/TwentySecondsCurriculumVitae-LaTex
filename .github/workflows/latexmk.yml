@@ -13,13 +13,13 @@ jobs:
       - uses: dante-ev/latex-action@latest
         with:
           root_file: cv_no_profilepic.tex
-      - if: github.event == 'push' && github.ref == 'refs/heads/main'
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/checkout@v3
         with:
           repository: Atry/yang-bo.com
           path: yang-bo.com
           ssh-key: ${{secrets.YANG_BO_COM_DEPLOY_KEY}}
-      - if: github.event == 'push' && github.ref == 'refs/heads/main'
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           set -ex
           mv *.pdf yang-bo.com/assets/
@@ -27,5 +27,5 @@ jobs:
           git config user.name ${{github.actor}}
           git config user.email ${{github.actor}}@users.noreply.github.com
           git add yang-bo.com/assets/*.pdf
-          git commit -m 'Upload CV'
+          git commit --all '--message=Upload CV'
           git push

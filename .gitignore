@@ -16,3 +16,5 @@
 *.synctex.gz
 *-dot2tex-fig*.dot
 *-dot2tex-fig*.tex
+/.devenv
+/.direnv

@@ -72,8 +72,7 @@
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
-\newcommand{\cvreddit}[1]{\renewcommand{\cvreddit}{#1}}
-\newcommand{\cvtwitter}[1]{\renewcommand{\cvtwitter}{#1}}
+\newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -147,10 +146,9 @@
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large\icon{\faHome}} & \href{\cvsite}{\cvsite}\\}
 			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{\faEnvelope}} & \href{mailto:\cvmail}{\cvmail}\\}
-			\ifthenelse{\equal{\cvtwitter}{}}{}{\textsc{\large\icon{\faTwitter}} & \href{https://twitter.com/\cvtwitter}{\cvtwitter}\\}
-			\ifthenelse{\equal{\cvreddit}{}}{}{\textsc{\large\icon{\faRedditAlien}} & \href{https://reddit.com/u/\cvreddit}{\cvreddit}\\}
 			\ifthenelse{\equal{\cvstackoverflow}{}}{}{\textsc{\large\icon{\faStackOverflow}} & \href{https://stackoverflow.com/users/\cvstackoverflow}{\cvstackoverflow}\\}
-			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\large\icon{\faGithubAlt}} & \href{https://github.com/\cvgithub}{\cvgithub}\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\large\icon{\faGithub}} & \href{https://github.com/\cvgithub}{\cvgithub}\\}
+			\ifthenelse{\equal{\cvlinkedin}{}}{}{\textsc{\large\icon{\faLinkedin}} & \href{https://www.linkedin.com/in/\cvlinkedin}{\cvlinkedin}\\}
 		\end{tabular}
 
 		%------------------------------------------------
